@@ -4,8 +4,8 @@ BANCO DE DADOS: https://www.kaggle.com/datasets/rodrigorosasilva/cic-ddos2019-30
 
 # Relatório do GUARDIAN LOGS
 
-**Disciplina:** PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA
-**Aluno(s):** GABRIEL YAN E MATEUS RECALDE
+**Disciplina:** PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA\n
+**Aluno(s):** GABRIEL YAN E MATEUS RECALDE\n
 **Professor:** RAFAEL MARCONI RAMOS
 
 ---
