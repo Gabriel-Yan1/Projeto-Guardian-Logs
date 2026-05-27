@@ -42,13 +42,13 @@ Informar as características do hardware e software utilizados na execução dos
 
 | Item                        | Descrição |
 | --------------------------- | --------- |
-| Processador                 |           |
-| Número de núcleos           |           |
-| Memória RAM                 |           |
-| Sistema Operacional         |           |
-| Linguagem utilizada         |           |
-| Biblioteca de paralelização |           |
-| Compilador / Versão         |           |
+| Processador                 | i5-1235U  |
+| Número de núcleos           |   12      |
+| Memória RAM                 |  8,00 GB  |
+| Sistema Operacional         | Windows 11|
+| Linguagem utilizada         | PYTHON    |
+| Biblioteca de paralelização |multiprocessing|
+
 
 ---
 
@@ -96,7 +96,7 @@ Preencha a tabela com os **tempos médios de execução** obtidos.
 
 | Nº Threads/Processos | Tempo de Execução (s) |
 | -------------------- | --------------------- |
-| 1                    |                       |
+| 1                    |        196.222        |
 | 2                    |                       |
 | 4                    |                       |
 | 8                    |                       |
