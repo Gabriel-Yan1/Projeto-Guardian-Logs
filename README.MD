@@ -98,11 +98,11 @@ Onde:
 
 | Threads/Processos | Tempo (s) | Speedup | Eficiência |
 | ----------------- | --------- | ------- | ---------- |
-| 1                 | 67.6728   | 1.0000  | 100.0%     |
-| 2                 | 34.9702   | 1.9352  | 96.8%      |
-| 4                 | 19.6031   | 3.4522  | 86.3%      |
-| 8                 | 12.2030   | 5.5456  | 69.3%      |
-| 12                | 10.8680   | 6.2268  | 51.9%      |
+| 1                 | 67.67     | 1.00    | 100%       |
+| 2                 | 34.97     | 1.93    | 96.8%      |
+| 4                 | 19.60     | 3.45    | 86.3%      |
+| 8                 | 12.20     | 5.54    | 69.3%      |
+| 12                | 10.86     | 6.22    | 51.9%      |
 
 ---
 
@@ -126,11 +126,20 @@ Onde:
 
 # 10. Análise dos Resultados
 
-* *O speedup obtido foi próximo do ideal?* Até 2 processos sim (96.8%). A partir de 4 processos, começou a haver um distanciamento da linha ideal, embora o ganho de tempo ainda fosse expressivo.
-* *A aplicação apresentou escalabilidade?* Sim, o tempo caiu de 67s para 10s. No entanto, a escalabilidade é sublinear.
-* *Em qual ponto a eficiência começou a cair?* A queda acentuada iniciou após 4 processos (caindo de 86% para 69% com 8).
-* *O número de threads ultrapassa o núcleo físico?* Sim. O i5-1235U possui 2 núcleos de performance (P) e 8 de eficiência (E). Ao usar 12 workers, o sistema utiliza núcleos de menor desempenho e hyper-threading, o que explica a queda na eficiência.
-* *Overhead de paralelização:* Houve overhead significativo na comunicação entre processos (IPC) para transferir os dicionários de resultados via Pickle, além da contenção de I/O no disco para ler 9.3GB em tão pouco tempo.
+* *O speedup obtido foi próximo do ideal?* 
+Até 2 processos sim (96.8%). A partir de 4 processos, começou a haver um distanciamento da linha ideal, embora o ganho de tempo ainda fosse expressivo.
+
+* *A aplicação apresentou escalabilidade?* 
+Sim, o tempo caiu de 67s para 10s. No entanto, a escalabilidade é sublinear.
+
+* *Em qual ponto a eficiência começou a cair?* 
+A queda acentuada iniciou após 4 processos (caindo de 86% para 69% com 8).
+
+* *O número de threads ultrapassa o núcleo físico?* 
+Sim. O i5-13400F possui 6 núcleos de performance (P) e 4 de eficiência (E). Ao usar 16 threads, o sistema utiliza núcleos de menor desempenho e hyper-threading, o que explica a queda na eficiência.
+
+* *Overhead de paralelização:* 
+Houve overhead significativo na comunicação entre processos (IPC) para transferir os dicionários de resultados via Pickle, além da contenção de I/O no disco para ler 9.3GB em tão pouco tempo.
 
 *Gargalos identificados:*
 1. *I/O de Disco:* Ler a ~850 MB/s satura a maioria dos SSDs NVMe de entrada.
