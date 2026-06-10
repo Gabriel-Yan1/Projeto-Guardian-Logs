@@ -114,13 +114,13 @@ As execuções foram realizadas com carga mínima do sistema operacional, permit
 ---
 
 ## 7. Gráfico de Tempo de Execução
-*(Espaço reservado para o gráfico)*
+![Gráfico Tempo Execução](graficos/tempo_execucao.png)
 
 ## 8. Gráfico de Speedup
-*(Espaço reservado para o gráfico)*
+![Gráfico Speedup](graficos/speedup.png)
 
 ## 9. Gráfico de Eficiência
-*(Espaço reservado para o gráfico)*
+![Gráfico Eficiência](graficos/eficiencia.png)
 
 ---
 
